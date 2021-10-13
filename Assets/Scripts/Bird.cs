@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public float speed = 1f;
+    private Rigidbody2D rig;
+
     void Start()
     {
-        
+        rig = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rig.velocity = Vector2.up * speed;
+        }
     }
 }
