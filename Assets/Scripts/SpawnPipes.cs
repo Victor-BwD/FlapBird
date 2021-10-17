@@ -21,9 +21,9 @@ public class SpawnPipes : MonoBehaviour
     {
         if(timer > maxTime)
         {
-            GameObject piClone = Instantiate(pipes[Random.Range(0, pipes.Length)], transform.position, transform.rotation) as GameObject;
-            piClone.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(piClone, 15f);
+            GameObject pipeClones = Instantiate(pipes[Random.Range(0, pipes.Length)], transform.position, transform.rotation) as GameObject;
+            pipeClones.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
+            Destroy(pipeClones, 10f);
             timer = 0;
         }
 

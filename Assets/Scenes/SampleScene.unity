@@ -261,7 +261,7 @@ MonoBehaviour:
   pipes:
   - {fileID: 5790043971567591755, guid: b80b1848695c91942b3f22f6c4c8e888, type: 3}
   - {fileID: 1504841545606818175, guid: 1045202a15a41a64f8f710600817b2f1, type: 3}
-  height: 0.8
+  height: 1.5
   maxTime: 2
 --- !u!4 &1004302365
 Transform:
