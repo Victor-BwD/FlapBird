@@ -8,6 +8,8 @@ public class Bird : MonoBehaviour
     public float speed = 1f;
     private Rigidbody2D rig;
 
+    public GameObject gameOver;
+
     void Start()
     {
         
@@ -21,5 +23,11 @@ public class Bird : MonoBehaviour
         {
             rig.velocity = Vector2.up * speed;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        gameOver.SetActive(true);
+        Time.timeScale = 0;
     }
 }

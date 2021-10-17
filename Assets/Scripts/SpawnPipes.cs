@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPipes : MonoBehaviour
 {
-    public GameObject[] pipes;
+    public GameObject[] pipes; // Create a array to get prefabs
     public float height;
     public float maxTime;
 
@@ -21,9 +21,9 @@ public class SpawnPipes : MonoBehaviour
     {
         if(timer > maxTime)
         {
-            GameObject pipeClones = Instantiate(pipes[Random.Range(0, pipes.Length)], transform.position, transform.rotation) as GameObject;
-            pipeClones.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
-            Destroy(pipeClones, 10f);
+            GameObject pipeClones = Instantiate(pipes[Random.Range(0, pipes.Length)], transform.position, transform.rotation) as GameObject; // Create a object to instantiate a array of pipes
+            pipeClones.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0); // Pipes position 
+            Destroy(pipeClones, 10f); // Destroy after 10 sec
             timer = 0;
         }
 
