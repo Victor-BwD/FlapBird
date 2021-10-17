@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
 
+    public int score;
+    public Text scoreText;
     //public Transform birdPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
         //Instantiate(birdPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        Time.timeScale = 1;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RestartGame()
     {
-        
+        SceneManager.LoadScene(0);
     }
 }
