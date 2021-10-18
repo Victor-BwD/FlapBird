@@ -23,6 +23,8 @@ public class Bird : MonoBehaviour
         {
             rig.velocity = Vector2.up * speed;
         }
+
+        transform.eulerAngles = new Vector3(0, 0, rig.velocity.y * 6f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
